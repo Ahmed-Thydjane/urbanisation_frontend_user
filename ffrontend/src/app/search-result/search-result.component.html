@@ -1,0 +1,29 @@
+
+<div id="container">
+  <h1><b>RESULTS</b></h1>
+  <div  *ngFor="let movie of data;" >
+    <div id="video_container">
+      <table>
+        <tr>
+          <td>
+            <a (click)="play_video(movie)">
+              <img src="{{movie.snippet.thumbnails.high.url}}" width="200" height="150">
+            </a>
+
+          </td>
+          <td (click)="play_video(movie)">
+            <b>{{movie.snippet.title.slice(0,30)}}...</b>
+            <p>{{movie.snippet.publishTime}}</p>
+          </td>
+          <td>
+            <input type="submit" id='submit' value='+Add in a playlist' (click)="addmovie(movie)" >
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+

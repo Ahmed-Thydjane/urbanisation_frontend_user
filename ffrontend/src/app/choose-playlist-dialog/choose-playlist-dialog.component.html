@@ -1,0 +1,12 @@
+
+<div id="container">
+  <H4>CHOOSE A PLAYLIST</H4>
+  <div *ngFor="let pl of data.data" id="pp" (click)="savemovie(pl)">
+    <p> {{pl.title}}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onClickFermer()"> Close </button>
+  </div>
+</div>
+
+

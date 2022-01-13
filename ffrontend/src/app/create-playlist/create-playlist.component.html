@@ -1,0 +1,16 @@
+<div id="container">
+  <h4 mat-dialog-title> NEW PLAYLIST </h4>
+
+  <div id="center" mat-dialog-content>
+    <mat-label> Name </mat-label>
+    <input matInput [(ngModel)]="title">
+  </div>
+
+  <br>
+  <p *ngIf="existeErreur" class="alert alert-danger" role="alert"> {{messageErreur}} </p>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onClickFermer()"> Cancel </button>
+    <button mat-button id="bb" (click)="onClickCreer()"> Create </button>
+  </div>
+</div>

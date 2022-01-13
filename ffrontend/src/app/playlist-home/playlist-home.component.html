@@ -1,0 +1,17 @@
+
+<div id="container">
+  <h1>MY PLAYLISTS</h1>
+  <input type="submit" id='submit' value='+New PlayList' (click)="newplaylist()">
+
+  <div *ngFor="let item of tab_id,let i" >
+    <div id="short_playlist" (click)="openplaylist(item.id)">
+         <h1>{{item.title}}</h1>
+
+    </div>
+         <hr>
+
+
+  </div>
+
+</div>
+

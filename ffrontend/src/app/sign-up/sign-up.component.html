@@ -1,0 +1,25 @@
+<div id="container">
+  <!-- zone de connexion -->
+   <h3>Sign up user</h3>
+  <form>
+
+    <label><b>Name or Pseudo</b></label>
+    <input type="text" placeholder="Pseudo" name="pseudo"  [(ngModel)]="pseudo"  required>
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Email" name="email"  [(ngModel)]="email"  required>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="password" required>
+    <label><b>Confirm Password</b></label>
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="password2" required>
+
+
+    <p style="color: red"> {{errorMessage}} </p>
+    <input type="submit" id='submit' value='Sign_up' (click)="sign_up()">
+    <footer>
+
+      <p> You already get an account?</p> <a routerLink="/login">Sign in </a>
+      <p> You want to be andvertiser</p> <a routerLink="/sign-up-advertiser">Sign in </a>
+    </footer>
+
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <img src="../assets/logo_mymov.png" width="180px" height="100px">
+  <form class="d-flex">
+    <input class="form-control me-2"  placeholder="Search" aria-label="Search" [(ngModel)]="research" name="research">
+    <button class="btn btn-outline-success" type="submit" (click)="onresearch()">Search</button>
+  </form>
+
+  <button id="butt" *ngIf="auth.isAuth===true" (click)="deconnection()"> Sign out</button>
+  <button id="but" *ngIf="auth.isAuth===false" routerLink="/login">Login </button>
+
+</nav>
+
+

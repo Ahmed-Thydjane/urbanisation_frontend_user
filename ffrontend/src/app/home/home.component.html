@@ -1,0 +1,16 @@
+<div id="container">
+  <h1>MAINSTREAMS</h1>
+  <div class="parent">
+    <div  *ngFor="let movie of data;">
+      <div class="div1">
+        <a (click)="play_video(movie)">
+          <img src="{{movie.snippet.thumbnails.high.url}}" width="150px" height="100px">
+          <p>{{movie.snippet.title.slice(0,20)}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+

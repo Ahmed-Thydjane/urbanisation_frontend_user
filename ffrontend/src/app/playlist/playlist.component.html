@@ -1,0 +1,24 @@
+<div id="container">
+
+  <div *ngFor="let item of id_playlist">
+
+    <h1 *ngIf="item.id==id_current_playlist">{{item.title}}</h1>
+  </div>
+    <div>
+      <div>
+        <div *ngFor="let vid of data_playlist" >
+          <div *ngIf="id_current_playlist==vid.id">
+            <div class="div1">
+              <a (click)="play_video(vid)">
+                <img src="{{vid.url}}" width="200" height="150">
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+</div>
