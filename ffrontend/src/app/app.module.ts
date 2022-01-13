@@ -28,6 +28,8 @@ import { PasswordDialogComponent } from './password-dialog/password-dialog.compo
 import {MatSnackBar, MatSnackBarModule} from "@angular/material/snack-bar";
 import { AddAdmindialogComponent } from './add-admindialog/add-admindialog.component';
 import { SignUpAdvertiserComponent } from './sign-up-advertiser/sign-up-advertiser.component';
+import {AddAddDialogComponent} from "./add-add-dialog/add-add-dialog.component";
+import {MatRadioModule} from "@angular/material/radio";
 
 
 @NgModule({
@@ -49,7 +51,8 @@ import { SignUpAdvertiserComponent } from './sign-up-advertiser/sign-up-advertis
     SettingsComponent,
     PasswordDialogComponent,
     AddAdmindialogComponent,
-    SignUpAdvertiserComponent
+    SignUpAdvertiserComponent,
+    AddAddDialogComponent
   ],
     imports: [
         BrowserModule,
@@ -63,7 +66,8 @@ import { SignUpAdvertiserComponent } from './sign-up-advertiser/sign-up-advertis
         MatButtonModule,
         CKEditorModule,
         MatSnackBarModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatRadioModule
 
     ],
   providers: [

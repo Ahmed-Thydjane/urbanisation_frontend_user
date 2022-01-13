@@ -52,7 +52,10 @@ export class LoginComponent implements OnInit {
       this.userserv.pw=Parcel.data[0].password;
       this.userserv.name=Parcel.data[0].name;
       this.userserv.role=Parcel.data[0].role;
-      this.router.navigateByUrl( '/home' );
+      this.userserv.permission=Parcel.data[0].permission;
+      if(this.userserv.permission===1)this.router.navigateByUrl( '/home' );
+      else this.errorMessage="Votre compte a bloqué!Veuillez contacter le service client pour plus de détail";
+
     }
   }
 

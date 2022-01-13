@@ -34,7 +34,7 @@ export class SignUpComponent implements OnInit {
     this.correctelyFill(this.email,this.password,this.password2,this.pseudo);
     if(!this.erreur){
       if(this.password2===this.password){
-        const data={name:this.pseudo, email:this.email ,password:this.password,role:0};
+        const data={name:this.pseudo, email:this.email ,password:this.password,role:this.role};
         console.log(data);
         this.messageService.sendMessage('sign_up',data).subscribe(
           (Parcel) => this.maCallBack( Parcel )

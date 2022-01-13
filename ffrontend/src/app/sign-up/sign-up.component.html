@@ -12,6 +12,11 @@
     <label><b>Confirm Password</b></label>
     <input type="password" placeholder="Password" name="password" [(ngModel)]="password2" required>
 
+    <mat-radio-group aria-label="Select an option" ngModel="role">
+      <mat-radio-button value="0">Video watcher</mat-radio-button>
+      <mat-radio-button value="1">Advertiser</mat-radio-button>
+    </mat-radio-group>
+
 
     <p style="color: red"> {{errorMessage}} </p>
     <input type="submit" id='submit' value='Sign_up' (click)="sign_up()">

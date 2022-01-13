@@ -12,6 +12,7 @@ playlists_id:any;
 id_selected_playlist:string | undefined;
 user_data:any;
 role: number | undefined;
+permission: number | undefined;
 
   constructor() { }
 }

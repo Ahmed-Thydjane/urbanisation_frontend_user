@@ -10,18 +10,23 @@ import {SignUpComponent} from "./sign-up/sign-up.component";
 import {SettingsComponent} from "./settings/settings.component";
 import {AdvertiserHomeComponent} from "./advertiser-home/advertiser-home.component";
 import {SignUpAdvertiserComponent} from "./sign-up-advertiser/sign-up-advertiser.component";
+import {AuthGuard} from "./auth/auth.guard";
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  {path:'search', component: SearchComponent },
-  {path:'search-result', component: SearchResultComponent },
-  { path: 'home', component:HomeComponent  },
-  { path: 'playlist_home', component:PlaylistHomeComponent  },
-  { path: 'playlist', component:PlaylistComponent  },
-  { path: 'sign_up', component:SignUpComponent  },
-  {path:'setting',component:SettingsComponent},
-  {path:'advertiser-home',component:AdvertiserHomeComponent},
-  {path:'sign-up-advertiser',component:SignUpAdvertiserComponent}
+
+
+      { path: 'login', component: LoginComponent },
+      {path:'search', component: SearchComponent },
+      {path:'search-result', component: SearchResultComponent },
+      { path: 'home', component:HomeComponent  },
+      { path: 'playlist_home', component:PlaylistHomeComponent  },
+      { path: 'playlist', component:PlaylistComponent  },
+      { path: 'sign_up', component:SignUpComponent  },
+      {path:'setting',component:SettingsComponent},
+      {path:'advertiser-home',component:AdvertiserHomeComponent},
+      {path:'sign-up-advertiser',component:SignUpAdvertiserComponent}
+
+
 ];
 
 @NgModule({

@@ -44,9 +44,10 @@
 <body>
 
 <div class="sidebar">
-  <a ><i class="fa fa-fw fa-gear" routerLink="/adminads"><span class="mm"> Ads</span></i> </a>
-  <a ><i class="fa fa-fw fa-gear" routerLink="/adminuser"><span class="mm">User</span></i></a>
-
+  <a ng *ngIf="this.auth.isAuth===false" routerLink="/login"><i ><span class="mm"> Sign in</span></i> </a>
+  <a ng *ngIf="this.auth.isAuth===true"><i class="fa fa-fw fa-gear" routerLink="/adminads"><span class="mm"> Ads</span></i> </a>
+  <a ng *ngIf="this.auth.isAuth===true"><i class="fa fa-fw fa-gear" routerLink="/adminuser"><span class="mm">User</span></i></a>
+  <a ng *ngIf="this.auth.isAuth===true" (click)="auth.isAuth=false"><i ><span class="mm"> Sign out</span></i> </a>
 </div>
 
 

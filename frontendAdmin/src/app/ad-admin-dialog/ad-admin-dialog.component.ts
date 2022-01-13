@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {MessageService} from "../message/message.service";
 import {AuthService} from "../auth/auth.service";
 import {UserService} from "../user/user.service";
+import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-ad-admin-dialog',
@@ -15,7 +16,8 @@ export class AdAdminDialogComponent implements OnInit {
   constructor(private messageService: MessageService,
   private authService: AuthService,
   private userserv:UserService,
-  private router: Router) { }
+  private router: Router,
+  private dialogRef:MatDialogRef<AdAdminDialogComponent>) { }
 
   email: string="";
   password: string="";
@@ -96,5 +98,8 @@ export class AdAdminDialogComponent implements OnInit {
     }
   }
 
+  onClickFermer(): void {
+    this.dialogRef.close( "fermer" );
+  }
 
 }
