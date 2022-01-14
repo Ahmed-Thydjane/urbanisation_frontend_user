@@ -24,7 +24,8 @@ const routes: Routes = [
       { path: 'sign_up', component:SignUpComponent  },
       {path:'setting',component:SettingsComponent},
       {path:'advertiser-home',component:AdvertiserHomeComponent},
-      {path:'sign-up-advertiser',component:SignUpAdvertiserComponent}
+      {path:'sign-up-advertiser',component:SignUpAdvertiserComponent},
+      {path:'**',redirectTo:'home'}
 
 
 ];
