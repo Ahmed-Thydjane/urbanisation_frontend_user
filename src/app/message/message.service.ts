@@ -16,7 +16,7 @@ export class MessageService
   {
     const urlComplete = environment.debutUrl + url ;
     console.log( urlComplete );
-    return this.http.post<Parcel>( urlComplete, data, {withCredentials: true} );
+    return this.http.post<Parcel>( urlComplete, data );
   }
 
   sendGetMessage( url: string ): Observable<any>
